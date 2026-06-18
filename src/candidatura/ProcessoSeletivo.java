@@ -4,8 +4,22 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class ProcessoSeletivo {
     public static void main(String[] args) {
-        selecaoCandidatos();
+        imprimirSelecionados();
     }
+
+    static void imprimirSelecionados(){
+        String[] candidatos = {"FELIPE", "EMERSON", "JULIA", "PAULO", "AUGUSTO"};
+        System.out.println("Imprimindo a lista do candidatos, informando o indice do elemento");
+        for(int indice=0;indice< candidatos.length;indice++){
+            System.out.println("O candidato de n " + indice + " é " + candidatos[indice]);
+        }
+
+        System.out.println("Forma abreviada de interação for each");
+        for (String candidato: candidatos){
+            System.out.println("O candidato selecionado foi " + candidato);
+        }
+    }
+
     static void selecaoCandidatos(){
         String []  candidatos = {"FELIPE", "EMERSON", "JULIA", "PAULO", "AUGUSTO","MONICA", "FABRICIO"};
 
